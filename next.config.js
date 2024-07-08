@@ -2,9 +2,13 @@
 // const nextTranslate = require('next-translate-plugin');
 
 const nextConfig = {
-  output: 'export',
   reactStrictMode: false,
   images: { unoptimized: true },
+  async rewrites() {
+    return [
+        { source: "/:path*", destination: "/status/:path*" },
+    ]
+  },
 };
 
 module.exports = nextConfig;
