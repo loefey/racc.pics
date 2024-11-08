@@ -1,4 +1,5 @@
 import { FC, useEffect, useState } from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Navbar: FC = () => {
@@ -6,7 +7,6 @@ const Navbar: FC = () => {
   const [currentHash, setCurrentHash] = useState("");
 
   useEffect(() => {
-    console.log(window.location.hash);
     const handleHashChange = () => {
       setCurrentHash(window.location.hash || "");
     };
@@ -42,7 +42,7 @@ const Navbar: FC = () => {
                 : "cursor-pointer hover:text-text-secondary"
             }`}
           >
-            {!isActive("/") ? <a href="/">home</a> : "home"}
+            {!isActive("/") ? <Link href="/">home</Link> : "home"}
           </li>
           <li
             className={`text-[#d8c2ba] transition-all duration-300 relative ${
@@ -51,7 +51,7 @@ const Navbar: FC = () => {
                 : "cursor-pointer hover:text-text-secondary"
             }`}
           >
-            {!isPhotosActive ? <a href="/#photos">photos</a> : "photos"}
+            {!isPhotosActive ? <Link href="/#photos">photos</Link> : "photos"}
           </li>
           <li
             className={`hover:text-text-secondary text-[#d8c2ba] transition-all duration-300 relative`}
