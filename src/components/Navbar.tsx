@@ -29,7 +29,7 @@ const Navbar: FC = () => {
     <>
       <nav className="flex flex-row p-3 justify-center items-center bg-bg-secondary">
         <img
-          src="https://cdn.racc.pics/imgs/newlogo.png"
+          src="https://cdn.errors.racc.lol/imgs/newlogo.png"
           alt="navbar-logo"
           className="w-14 h-auto rounded-full"
           draggable={false}

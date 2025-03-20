@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>racc.pics</title>
+        <title>error.racc.lol</title>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
         <meta charSet="utf-8" />

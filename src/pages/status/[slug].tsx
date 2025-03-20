@@ -32,16 +32,26 @@ export default function Page() {
         style={{ minHeight: "calc(100vh - 200px)" }}
       >
         <section className="flex flex-row bg-bg-secondary rounded-lg w-full p-3 text-text-secondary">
-          <p>https://racc.pics/{slug}.png</p>
-        
-          <button type="button" className="ml-auto" onClick={() => {
-            navigator.clipboard.writeText(`https://racc.pics/${slug}.png`);
-            setCopied(true);
-            setTimeout(() => {
-              setCopied(false);
-            }, 2000);
-          }}>
-            {copied ? <IoIosCheckmark className="text-text-primary text-[1.5rem]"/> : <FaCopy className="text-text-primary hover:text-text-secondary transition-all duration-200"/>}
+          <p>https://error.racc.lol/{slug}.png</p>
+
+          <button
+            type="button"
+            className="ml-auto"
+            onClick={() => {
+              navigator.clipboard.writeText(
+                `https://error.racc.lol/${slug}.png`
+              );
+              setCopied(true);
+              setTimeout(() => {
+                setCopied(false);
+              }, 2000);
+            }}
+          >
+            {copied ? (
+              <IoIosCheckmark className="text-text-primary text-[1.5rem]" />
+            ) : (
+              <FaCopy className="text-text-primary hover:text-text-secondary transition-all duration-200" />
+            )}
           </button>
         </section>
 
@@ -57,5 +67,5 @@ export default function Page() {
         </div>
       </main>
     </>
-  )
+  );
 }
