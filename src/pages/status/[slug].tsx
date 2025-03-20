@@ -32,14 +32,14 @@ export default function Page() {
         style={{ minHeight: "calc(100vh - 200px)" }}
       >
         <section className="flex flex-row bg-bg-secondary rounded-lg w-full p-3 text-text-secondary">
-          <p>https://error.racc.lol/{slug}.png</p>
+          <p>https://errors.racc.lol/{slug}.png</p>
 
           <button
             type="button"
             className="ml-auto"
             onClick={() => {
               navigator.clipboard.writeText(
-                `https://error.racc.lol/${slug}.png`
+                `https://errors.racc.lol/${slug}.png`
               );
               setCopied(true);
               setTimeout(() => {
